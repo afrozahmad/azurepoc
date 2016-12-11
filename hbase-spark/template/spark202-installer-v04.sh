@@ -31,7 +31,7 @@ download_file http://d3kbcqa49mib13.cloudfront.net/spark-2.0.2-bin-hadoop2.6.tgz
 
 # Untar the Spark binary and move it to proper location.
 untar_file /tmp/spark-2.0.2-bin-hadoop2.6.tgz /usr/hdp/current
-mv /usr/hdp/current/spark-2.0.2-bin-hadoop2.6.tgz /usr/hdp/current/spark
+mv /usr/hdp/current/spark-2.0.2-bin-hadoop2.6 /usr/hdp/current/spark
 
 # Remove the temporary file downloaded.
 rm -f /tmp/spark-2.0.2-bin-hadoop2.6.tgz
