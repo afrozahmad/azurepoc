@@ -40,6 +40,8 @@ rm -f /tmp/spark-2.0.2-bin-hadoop2.6.tgz
 
 echo "SPARK_DIST_CLASSPATH=$(hadoop classpath)$(hbase classpath)" | sudo tee -a /etc/environment
 echo "export SPARK_DIST_CLASSPATH=$(hadoop classpath)$(hbase classpath)"
+echo "eexport SPARK_MAJOR_VERSION=2"
+
 
 ln -s /etc/hive/conf/hive-site.xml /usr/hdp/current/spark/conf
 
