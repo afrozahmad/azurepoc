@@ -252,7 +252,7 @@
     
     <property>
       <name>hbase.zookeeper.quorum</name>
-      <value>zookeeper</value>
+      <value>__zookeeper__</value>
     </property>
     
     <property>

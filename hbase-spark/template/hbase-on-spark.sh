@@ -8,5 +8,5 @@ wget -O /tmp/hbase-config.xml -q https://hdiconfigactions.blob.core.windows.net/
 
 
 
-sed "s/zookeeper/$zk/g" < /tmp/hbase-site.xml > /etc/hbase/conf/hbase-site.xml
+sed "/s/__zookeeper__/$zk/g" < /tmp/hbase-site.xml > /etc/hbase/conf/hbase-site.xml
 
