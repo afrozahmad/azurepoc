@@ -11,5 +11,5 @@ wget -O /tmp/hbase-site.xml -q https://raw.githubusercontent.com/afrozahmad/azur
 
 
 rm -f /etc/hbase/conf/hbase-site.xml
-sed "/s/__zookeeper__/$zk/g" < /tmp/hbase-site.xml > /etc/hbase/conf/hbase-site.xml
+sed "s/__zookeeper__/$zk/g" < /tmp/hbase-site.xml > /etc/hbase/conf/hbase-site.xml
 
