@@ -4,7 +4,7 @@ mv jq /tmp/jq
 
 
 
-zk = $(curl -s -u admin:Password@123 -G https://hbase-base.azurehdinsight.net/api/v1/clusters/hbase-base/services/ZOOKEEPER/components/ZOOKEEPER_SERVER | jq '[.host_components[].HostRoles.host_name]|join(", ")')
+zk = $(curl -s -u admin:Password@123 -G https://hbase-base.azurehdinsight.net/api/v1/clusters/hbase-base/services/ZOOKEEPER/components/ZOOKEEPER_SERVER | /tmp/jq '[.host_components[].HostRoles.host_name]|join(", ")')
 
 #wget hbase-config from git to the servers
 wget -O /tmp/hbase-config.xml -q https://raw.githubusercontent.com/afrozahmad/azurepoc/master/hbase-spark/template/hbase-site.xml
