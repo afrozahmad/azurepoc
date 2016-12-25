@@ -1,5 +1,7 @@
-wget -O /tmp/jq https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64
+wget -O jq https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64
 chmod +x ./jq
+mv jq /tmp/jq
+
 
 
 zk = $(curl -s -u admin:Password@123 -G https://hbase-base.azurehdinsight.net/api/v1/clusters/hbase-base/services/ZOOKEEPER/components/ZOOKEEPER_SERVER | jq '[.host_components[].HostRoles.host_name]|join(", ")')
