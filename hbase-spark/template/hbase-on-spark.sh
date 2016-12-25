@@ -8,6 +8,6 @@ zk = $(curl -s -u admin:Password@123 -G https://hbase-base.azurehdinsight.net/ap
 wget -O /tmp/hbase-config.xml -q https://raw.githubusercontent.com/afrozahmad/azurepoc/master/hbase-spark/template/hbase-site.xml
 
 
-rm /etc/hbase/conf/hbase-site.xml
+rm -f /etc/hbase/conf/hbase-site.xml
 sed "/s/__zookeeper__/$zk/g" < /tmp/hbase-site.xml > /etc/hbase/conf/hbase-site.xml
 
